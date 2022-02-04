@@ -56,7 +56,7 @@
                 <hr class="minor" />
                 <div class="box alt">
                     <div class="row gtr-uniform">
-                        <div class="col-6"><span class="image fit"><img src="images/ara/pic01.png" alt="" /></span></div>
+                        <div class="col-6"><span class="image fit"><img src="images/ara/pic01.PNG" alt="" /></span></div>
                         <div class="col-6"><p>Early in the design process, our team found that it would be vital to have a model of the rocket that required a less solidified configuration of our rocket than the software we were using for final designs - OpenRocket. There were a few key things we wanted from the model. An approximation of apogee assuming a completely vertical flight, max flight velocity, and an ability to see how changes in key design parameters affect these values.</p></div>
                         <div class="col-12"><p>The first approach was deriving a basic force equation that included air drag. I implemented the equations in Excel and they worked reasonably well - providing velocities and altitude at burnout, which could be used to calculate apogee. However, this model didn’t meet two of the requirements we wanted, but rather provided a reference for future models.</p></div>
                         <div class="col-12"><p>The second approach was significantly more robust. I wrote it in MATLAB in a way that allowed the inclusion of what the previous model lacked. Air density was written as a function of altitude. Rocket mass was no longer averaged - mass flow rate through the nozzle was accounted for. Thrust was now a table derived from manufacturer’s thrust graphs, which meant different motor grains now had a noticeable effect on the flight curve.</p></div>
