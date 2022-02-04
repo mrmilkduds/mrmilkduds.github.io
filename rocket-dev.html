@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<!--
+    Phantom by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>James' Portfolio - Solids Rocket Development</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <div class="inner">
+
+                <!-- Logo -->
+                <a href="index.html" class="logo">
+                    <span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">James Stewart</span>
+                </a>
+
+                <!-- Nav -->
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <!-- Menu -->
+        <nav id="menu">
+            <h2>Menu</h2>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="index.html#Engineering">Engineering</a></li>
+					<li><a href="index.html#Programming">Programming</a></li>
+					<li><a href="index.html#Personal">Personal</a></li>
+					<li><a href="#footer">Contact</a></li>
+				</ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+                <h1>Solids Rocket Development</h1>
+                <p>While serving Alabama Rocketry Association as Chief Engineer of the solid propulsion team, Deimos, I worked on two additional projects to assist the team. The first was developing a rocket simulation to facilitate the design process, the second was establishing a base model for the team to iterate and improve on. </p>
+                <h3>Modeling and Simulation</h3>
+                <hr class="minor" />
+                <div class="box alt">
+                    <div class="row gtr-uniform">
+                        <div class="col-6"><span class="image fit"><img src="images/ara/pic01.png" alt="" /></span></div>
+                        <div class="col-6"><p>Early in the design process, our team found that it would be vital to have a model of the rocket that required a less solidified configuration of our rocket than the software we were using for final designs - OpenRocket. There were a few key things we wanted from the model. An approximation of apogee assuming a completely vertical flight, max flight velocity, and an ability to see how changes in key design parameters affect these values.</p></div>
+                        <div class="col-12"><p>The first approach was deriving a basic force equation that included air drag. I implemented the equations in Excel and they worked reasonably well - providing velocities and altitude at burnout, which could be used to calculate apogee. However, this model didn’t meet two of the requirements we wanted, but rather provided a reference for future models.</p></div>
+                        <div class="col-12"><p>The second approach was significantly more robust. I wrote it in MATLAB in a way that allowed the inclusion of what the previous model lacked. Air density was written as a function of altitude. Rocket mass was no longer averaged - mass flow rate through the nozzle was accounted for. Thrust (and I’m particularly proud of this one) was now a table derived from manufacturer’s thrust graphs, which meant different motor grains now had a noticeable effect on the flight curve.</p></div>
+                        <div class="col-12"><p>The part that ended up being of most use was that this simulation could be iterated over key design variables. The main parameter analyzed was ‘[Rocket] Mass without Motor’ - we were reusing a rocket shell from a previous year mainly to reduce club expenditures, but this had a secondary benefit of greatly narrowing down free design variables. The images to the [RIGHT] depict the effect of rocket mass on maximum aerodynamic pressure, mach number, and altitude of flights for various motors. For our PDR downselect, we used these graphs to choose motor M795-0 for our PDR Downselect. The motor choice ended up being scrapped - the T/W ratio was way too low at take off and would have made the sounding rocket an unguided weapon on the launch site due to weather cocking.</p></div>
+                        <div class="col-4"><span class="image fit"><img src="images/ara/pic02.png" alt="" /></span></div>
+                        <div class="col-4"><span class="image fit"><img src="images/ara/pic03.png" alt="" /></span></div>
+                        <div class="col-4"><span class="image fit"><img src="images/ara/pic04.png" alt="" /></span></div>
+                    </div>
+                </div>
+
+                <h3>Rocket Configuration</h3>
+                <hr class="minor" />
+                <p>This is mainly a 'lessons learned' from my stint leading a team - The development of a basic rocket configuration that was to be improved throughout the year was a plan to remedy a few of the team member onboarding issues I had experienced as a member new to ARA. The main things I noticed was that one:  ‘building a rocket’ is a very nebulous concept, especially for those unfamiliar with hobby rockets. Two: most people entering project teams, specifically college freshmen,  likely don't know where their interests lie and comitting a semester or two to a certain subsystem seemed to stifle learning opportunities.</p>
+                <p>In attempt to fix these issues, I planned to provide an almost complete rocket design. This design would provide a reference to any changes we wanted to make to the system. Team members could hone in on different systems or components they wanted to improve and see those changes take shape if the team agreed. If a few members were interested in aerodynamic effects of the nosecone, they could provide analysis on a few different profiles and aspect ratios and the team would decide on if the design should be changed. </p>
+                <p>I think, largely, the effort was a failure. The participation system I had developed required a lot of buy-in and self-drive. We also had to operate in the newly online-only environment that COVID-19 granted us, which, while not the sole source of issues, a contributing factor to the team participation seen.</p>
+                <span class="image main"><img src="images/ara/pic06.png" alt="" /></span>
+            </div>
+        </div>
+							
+				<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<h2>Get in touch!</h2>
+						<ul class="icons">
+							<li><a href="#" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</section>
+				</div>
+			</footer>
+
+	</div>
+
+ 
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

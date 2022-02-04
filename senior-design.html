@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Thermodynamic Energy Storage system</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">James Stewart</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li><a href="about.html">About</a></li>
+								<li><a href="index.html#Engineering">Engineering</a></li>
+								<li><a href="index.html#Programming">Programming</a></li>
+								<li><a href="index.html#Personal">Personal</a></li>
+								<li><a href="#footer">Contact</a></li>
+							</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Thermodynamic Energy Storage System</h1>
+							<p>This page serves as an introduction to the senior design project I've been working on as Simulations & Modeling lead since September of 2021 in collaboration with ten of my peers. It covers the general concept of our design as well as my individual contributions to our effort. We are just now completeing our Critical Design Review and will start manufacturing and testing in the coming weeks.</p>
+					 		<h3>Overview</h3>
+                			<hr class="minor" />
+					 		<div class="box alt">
+								<div class="row gtr-uniform">
+                       			  <div class="col-3"><span class="image fit"><img src="images/senior-design/pic01.png" alt="" /></span></div>
+                        			<div class="col-9">
+										<p>The focus of our senior design class was energy storage systems that have applications in space exploration. On Earth we have the luxuries of infrastructure and raw materials that allows for the several hundred gigawatts of power able to be stored - 90% of which is stored in the form of pumped-storage hydroelectricity. The places humans would like to colonize in space, think the Moon or Mars, do not yet have these type of luxuries. Space also has another problem. </p>
+										<p>Managing heat is a notoriously tricky thing in space. It's why the International Space Station has massive radiators and why the newly launched James Webb Telescope has a 70-foot-long sunshield. And why our team decided to focus on a device that would not only manage heat, but also use it as a method of energy storage.</p>
+									</div>
+									
+									<div class="col-12">			<p>The key premise of our design is to use waste heat to melt a material stored inside a container. Certain materials that require a lot of energy to change phases, and conversely, give a lot of energy when that phase change reverses, are called phase change materials.</p>
+										<p>In a space application, the TESS would be used on a lunar or martian colony in a fashion similar to the way the heat rejection system on the ISS works. Instead of radiating heat from electronics or solar radiation back to space, however, the heat would instead be transfered to the TESS. During periods of high thermal load, like a lunar 'day', the TESS would soak up this energy and be used during,in this example, a lunar 'night' to produce energy and dissipate stored heat.</p>
+									</div>			
+								</div>
+							</div>
+							<h3>Integrated System Model</h3>
+                			<hr class="minor" />
+							<div class="box alt">
+								<div class="col-12">
+									<p>The majority of my work has been as <em><b>Keeper of the Integrated Model</b></em>. This includes managing source control, verification & validation, and, primarily, working with technical subsystem leads on their mathmatical models, implimenting them, and integrating them into a cohesive script that accurately models the behavior of our system.</p>
+									<p>My initial goal for the model was for it to serve also as a design tool for the team. This meant tractable values for different components of the system, an easy-to-use and robust GUI so the technical leads wouldn't have to muck around in the code, and easily accesibly outputs. To meet these requirements I decided to code the first iteration of the model in Python.</p>
+								</div>
+								<div class="box alt">
+									<p>The pictures above are the shell of the inregrated model GUI. It featured a Save/Load function that allowed for different model presets to be analyzed quickly. The model itself was object-oriented, which allowed for fairly tractable values, allowing for the capability to selectively analyze different values of various system components on the GUI - something that did wonders to keep the user's monitor from looking like something out of <i>War Games</i>. I resolved rather quickly, however, that the use of Python was, while idyllic in some cases, not very practical in most. Much of my team had very little or no Python experience and the design and models at this point in time were changing very rapidly. This lead to a significant bottleneck in our development process, where most changes to the integrated model had to be done by myself.</p>
+									<p>We switched to MATLAB, a language everyone on the team had used at some point or the other. The turn around times on changes to our design or model were much shorter, as separate technical leads could change sections of their code at will, or provide scripts for me to implement in the integrated system model. The pictures below are results from before a requirement change occured, where we massively increased the volume of our PCM. I'll likely update these in the coming days </p>
+									<div class="row gtr-uniform">
+										<div class="col-4"><span class="image fit"><img src="images/senior-design/pic03.png" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/senior-design/pic04.png"  alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/senior-design/pic05.png"  alt="" /></span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+				</div>
+
+				<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<section>
+						<h2>Get in touch!</h2>
+						<ul class="icons">
+							<li><a href="#" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="#" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</section>
+				</div>
+			</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			
+	</body>
+</html>
